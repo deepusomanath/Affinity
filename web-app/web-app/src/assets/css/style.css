@@ -1,0 +1,333 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+body{
+
+	background:#23315f;
+}
+html{
+	height: 100%
+}
+body,html{
+	min-height: 100%;
+    
+}
+nav{
+	background:transparent !important;
+	box-shadow:none !important;
+	height: 70px !important;
+	padding-top: 30px;
+	line-height: 40px !important;	
+}
+.container-fluid{
+	margin:0 10%;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.brand-logo{
+	font-size: 1.5rem !important;
+}
+.brand-logo span{
+	display:inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 30px;
+	height: 40px;
+}
+.logo-icon{
+	background:url(../images/logo.png) 0 0 no-repeat;
+}
+.dark {
+	background:rgba(0,0,0,0.4);
+}
+.main-nav{
+	margin-left:220px;
+}
+.main-search{
+	width:800px;
+}
+.search-btn{
+	position: absolute !important;
+	right: 0;
+	top:0;
+}
+.main-search .pad-right {
+	padding-right: 80px !important;
+}
+.title{
+	margin: 50px 0;
+}
+
+.inner-bg{
+	background: url(../images/bg-pattern.jpg) 0 0 repeat-x #fafbfc;
+	height: 100%;
+}
+.inner-search{
+	/*background: #fff;*/
+	border-radius: 5px;
+}
+.inner-search select, .inner-search input[type=text]{
+	margin-bottom: 5px;
+		
+}
+.inner-wrapper{
+	background: #fff;
+	border: 1px solid #e3e6e6;
+	border-radius: 5px;
+	min-height: 400px;
+	
+}
+.inner-head{
+	border-bottom: 1px solid #e3e6e6;
+	padding: 5px 0;
+	margin-bottom: 10px;
+}
+.inner-head ul{
+	margin:2px 0;
+}
+.inner-head ul li{
+	display: inline-block;
+}
+input[type="checkbox"]+label{
+	font-size: 0.8125rem;
+	padding-left: 25px;
+	padding-right: 10px;
+}
+input[type="checkbox"]+label:before, input[type="checkbox"].filled-in:not(:checked)+label:after{
+  border:2px solid #a0a0a0 ;
+}
+label{
+	color: #333;
+}
+.lft-list li{
+	padding: 2px;
+}
+nav ul a{
+	border-radius: 3px;
+}
+.search-list{
+	background: #f9f9f9;
+	border-radius: 5px;
+	border:1px solid #f1f0f0;
+	margin-bottom: 10px;
+}
+.search-list .blue-btn{
+   margin-top: 80px;
+}
+.search-list .row{
+	margin-bottom: 0;
+}
+.details{
+	position: relative;
+	padding: 10px;
+	padding-left: 100px;
+	
+}
+.details h5{
+	font-size:1.25rem;
+	margin:0;
+	color: #24315e;
+}
+.clinic-pic{
+	width:80px;
+	height:80px;
+	overflow: hidden;
+	border-radius: 10px;
+	position: absolute;
+	left:0;	
+	top:10px;
+}
+.clinic-pic img{
+	max-width: 100%;
+}
+.clinic-exp{
+	margin-bottom: 0;
+}
+.clinic-exp li{
+	font-size: 0.875rem;
+}
+.clinic-exp li i{
+	font-size: 0.875rem;
+	color: #666;
+}
+.blue-btn{
+	background: #1ab2f3;
+}
+.blue-btn:hover,.blue-btn:focus {
+    background: #28bfff;
+}
+.reg-btn{
+	border: 1px solid #1ab2f3;
+    color: #1ab2f3;
+    background: none;
+    line-height: 30px;
+    padding: 0 20px;
+    border-radius: 15px;
+}
+.reg-btn:hover, .reg-btn:focus{
+	background: #1ab2f3;
+	color: #fff;
+}
+.main-search label, .inner-search label{
+	color: #999;
+}
+.main-search input, .inner-search input{
+	color: #fff;
+	
+}
+.input-field{
+	margin-top:0 !important;
+}
+
+.dropdown-content li span{
+	color: #333 !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+    background-color: transparent !important;
+    color: #555 !important;
+    -webkit-box-shadow: none !important;
+    -webkit-text-fill-color: #555555 !important;
+}
+mz-input-container .autocomplete-content{
+	position: relative;
+}
+mz-input-container .autocomplete-content{
+	position: absolute;
+	width: 100%;
+}
+.autocomplete-content li img{
+   display: none;
+}
+.inner-search .search-btn{
+	display: none;
+}
+
+.CollapseDiv.close{
+	display: none;
+}
+.CollapseDiv.open{
+	display: block;
+	border-top: 1px solid #e4e4e4;
+	padding-top: 30px !important;
+}
+.date-select{
+	padding-top: 10px;
+}
+.picker__input datepicker{
+	margin-bottom: 15px;
+}
+.time li{	
+	float: left;
+	margin-right: 10px
+}
+.time li a{
+	background: #fff;
+    padding: 5px 10px;
+    color: #333;
+    box-shadow: 0 0 10px #cacaca;
+    border-radius: 3px;
+	float: left;
+	display: block;
+}
+.time li a:hover, .time li a.active{
+	background: #1ab2f3;
+    color: #fff;
+
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.completer-input:focus {
+	background: transparent !important;
+	color: #fff  !important;
+}
+
+.left-scroll{
+	max-height: 500px;
+	overflow: auto;
+}
+.left-scroll::-webkit-scrollbar {
+	width: 10px;
+  }
+   
+.left-scroll::-webkit-scrollbar-thumb {
+	background: #666;
+	border-radius: 20px;
+  }
+  
+.left-scroll::-webkit-scrollbar-track {
+	background: #ddd;
+	border-radius: 20px;
+  }
+  .switch {
+	position: relative;
+	display: inline-block;
+	width: 38px;
+	height: 23px;
+	float:left;
+	margin-right: 8px;
+    margin-top: -4px;
+	}
+  
+  .switch input {display:none;}
+  
+  .sliderSwitch {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #23315f;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .sliderSwitch:before {
+	position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+	}
+  
+  input:checked + .sliderSwitch {
+	background-color: #23315f;
+  }
+  
+  input:focus + .sliderSwitch {
+	box-shadow: 0 0 1px #23315f;
+  }
+  
+  input:checked + .sliderSwitch:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(14px);
+	}
+  
+  /* Rounded sliders */
+  .sliderSwitch.round {
+	border-radius: 34px;
+  }
+  
+  .sliderSwitch.round:before {
+	border-radius: 50%;
+  }

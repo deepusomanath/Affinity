@@ -1,0 +1,9 @@
+<form (ngSubmit)="searchClinic()"  #searchForm="ngForm">
+<div class="input-field col m4">                      
+    <ng2-completer [(ngModel)]="search.location" [datasource]="locationList" [placeholder]="'Location'" [minSearchLength]="0" name="search" [clearUnselected]="true"  (selected)="emitEvent()"></ng2-completer>
+  </div>      
+  <div class="input-field pad-right col m8">          
+    <ng2-completer [(ngModel)]="search.clinic" [datasource]="clinicList" [placeholder]="'Clinic or Speciality'" [minSearchLength]="0" name="location" [clearUnselected]="true" (selected)="emitEvent()"></ng2-completer>  
+    <button type="submit" class="left btn-floating search-btn btn-large waves-effect waves-light light-blue"><i class="material-icons">arrow_forward</i></button>    
+  </div>
+  </form>

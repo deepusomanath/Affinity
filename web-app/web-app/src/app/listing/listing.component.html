@@ -1,0 +1,111 @@
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container-fluid"> 
+    <div class="row center inner-search">       
+            <app-search [search]="searchParam" (inputChange)="clinicSearchList()"></app-search>
+    </div>      
+  </div>
+</div>
+<div class="container-fluid" >
+  <div class="section inner-wrapper">
+    <!--   Icon Section   -->  
+        <div class="row">
+            <div class="col m3">
+              <div class="inner-section">
+                <div class="inner-head">
+                  <h6> 
+                        <label class="switch">
+                            <input type="checkbox" checked [(ngModel)]="toggleFilters">
+                            <span class="sliderSwitch round"></span>
+                        </label>
+                        <span [hidden]="toggleFilters">Specialities</span>
+                        <span [hidden]="!toggleFilters">Hospitals</span>
+                  </h6>
+                </div>  
+                <div class="lft-list left-scroll">
+                    <form *ngIf='showFilters'>
+                      <ul [hidden]="toggleFilters" >                       
+                          <li *ngFor="let item of specialityList; let i = index" >
+                              <input type="checkbox" class="filled-in" id="spec-check{{i}}"   value="{{item.value}}"  [(ngModel)]="item.selected" [ngModelOptions]="{standalone:true}" (change)='onInputChange(item.searchName, $event)' />
+                              <label [attr.for]="'spec-check'+i">{{ item.searchName }}</label>  
+                          </li> 
+                      </ul>
+                      <ul [hidden]="!toggleFilters">
+                          <li *ngFor="let item of hospitalList; let i = index" >
+                                <input type="checkbox" class="filled-in" id="hosp-check{{i}}"  value="{{item.value}}" [(ngModel)]="item.selected" [ngModelOptions]="{standalone:true}" (change)='onInputChange(item.searchName, $event)' />
+                                <label [attr.for]="'hosp-check'+i">{{ item.searchName }}</label>  
+                            </li>                          
+                      </ul>
+                    </form>
+                </div>  
+              </div>  
+            </div>
+            <div class="col m9">
+              <div class="inner-section">
+                  <div class="inner-head row">
+                      <div class="left">
+                        <ul>
+                            <li>Morning</li>
+                            <li>Evening</li>
+                            <li>Night</li>
+                        </ul>
+                      </div>
+                      <div class="right">
+                          <!-- <ul>
+                              <li> 
+                                  <input type="checkbox" id="test1" />
+                                  <label for="test1">Sun</label>  
+                              </li>
+                              <li> 
+                                  <input type="checkbox" id="test2" />
+                                  <label for="test2">Mon</label>  
+                              </li>                              
+                          </ul> -->
+                      </div>
+                  </div>
+                 
+                  <div >
+                   <div class="search-list row"  *ngFor="let item of clinicListDetails">                       
+                        <div class="col m8">
+                            <div class="details">
+                                <div class="clinic-pic"><img src="assets/images/default_avatar.png" /></div>
+                                <h5>{{ item.estName }}</h5> 
+                                <ul class="clinic-exp" >
+                                    <li *ngFor= "let items of item.entityProperties">
+                                        <span *ngIf="items.propertyCode==2"><i class="material-icons dp48" >center_focus_strong</i>  {{items.propertyValue}} </span>
+                                        <span *ngIf="items.propertyCode==1"><i class="material-icons dp48">work</i> {{items.propertyValue}} </span>
+                                        <span *ngIf="items.propertyCode==3"><i class="material-icons dp48">credit_card</i> {{items.propertyValue}} </span>                                    
+                                    </li>
+                                    <li ><i class="material-icons dp48">place</i> {{item.stateName}}, {{item.countryName}}</li>                                    
+                                </ul>                                               
+                            </div>
+                            </div>
+                            <div class="col m4 right-align">
+                                <button class="waves-effect waves-light btn blue-btn" (click)="item.toggle = !item.toggle">Book Appointment</button>
+                            </div>  
+                            <div class="CollapseDiv col m12"  > 
+                                    <div class="CollapseDiv col m12"  [ngClass]="item.toggle ? 'open': 'close'" > 
+                                <div class="row">
+                                    <div class="col m6 date-select">
+                                        <mz-datepicker-container class="col s12">
+                                            <input mz-datepicker [label]="'Select Date'"  [options]="options" id="datepicker" type="text">
+                                        </mz-datepicker-container>                                        
+                                    </div>
+                                    <div class="col m12" [hidden]="!appointmentTime">
+                                        <ul class="time clearfix">
+                                            <li><a href="javascript:void;">10:00:00</a></li>                                            
+                                        </ul>
+                                    </div>                                    
+                                </div>
+                                </div>
+                                
+                            </div>                     
+                    </div>
+                </div>
+                </div>
+
+             </div>
+        </div> 
+    
+  </div>
+
+</div>
